@@ -3,6 +3,7 @@ package realtime_dws;
 import Base.BaseApp;
 import Constat.constat;
 import bean.CartADDUU;
+import bean.TrafficHomeDetailPageViewBean;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
@@ -37,7 +38,7 @@ import utils.finksink;
  */
 public class dws_trade_cart_add_uu_window extends BaseApp {
     public static void main(String[] args) throws Exception {
-        new dws_trade_cart_add_uu_window().start(10013, 4, "dws_trade_cart_add_uu_window", constat.TOPIC_DWD_TRADE_CART_ADD);
+        new dws_trade_cart_add_uu_window().start(10029, 4, "dws_trade_cart_add_uu_window", constat.TOPIC_DWD_TRADE_CART_ADD);
     }
 
     @Override
@@ -141,12 +142,14 @@ public class dws_trade_cart_add_uu_window extends BaseApp {
                 return JSON.toJSONString(cartADDUU);
             }
         });
-        map1.print();
+//        map1.print();
         //        Caused by: org.apache.doris.flink.exception.DorisRuntimeException:
         //        tabel {} stream load error: realtime_v1.dws_trade_cart_add_uu_window,
         //        see more in [DATA_QUALITY_ERROR]too many filtered rows
 
-//        map1.sinkTo(finksink.getDorisSink("dws_trade_cart_add_uu_window"));
+        map1.print();
+
+        map1.sinkTo(finksink.getDorisSink("dws_trade_cart_add_uu_window"));
 
     }
 }

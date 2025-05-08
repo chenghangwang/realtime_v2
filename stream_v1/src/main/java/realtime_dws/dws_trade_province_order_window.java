@@ -45,7 +45,7 @@ import java.util.HashSet;
 public class dws_trade_province_order_window extends BaseApp {
     public static void main(String[] args) throws Exception {
         new dws_trade_province_order_window().
-                start(10015,4,
+                start(10030,4,
                         "dws_trade_province_order_window",
                         constat.TOPIC_DWD_TRADE_ORDER_DETAIL);
     }
@@ -214,6 +214,7 @@ public class dws_trade_province_order_window extends BaseApp {
             }
         });
         map1.print();
+
 //        2> {"curDate":"2025-04-13","edt":"2025-04-13 22:28:40","orderAmount":157122.69,"orderCount":87,"provinceId":"28","provinceName":"海南","stt":"2025-04-13 22:28:30"}
 
         //        //TODO 10.将关联的结果写到Doris中

@@ -412,7 +412,7 @@ public class dws_trade_sku_order_window extends BaseApp {
                 return JSON.toJSONString(tradeSkuOrderBean);
             }
         });
-//        map.print();
+        map.print();
 //        2> {"activityReduceAmount":0.00,"category1Id":"8","category1Name":"个护化妆","category2Id":"54","category2Name":"香水彩妆","category3Id":"473","category3Name":"香水","couponReduceAmount":0.00,"curDate":"2025-04-17","edt":"2025-04-17 08:44:50","orderAmount":13800.00,"originalAmount":13800.0000,"skuId":"32","skuName":"香奈儿（Chanel）女士香水5号香水 粉邂逅柔情淡香水EDT 5号淡香水35ml","spuId":"11","spuName":"香奈儿（Chanel）女士香水5号香水 粉邂逅柔情淡香水EDT ","stt":"2025-04-17 08:44:40","trademarkId":"11","trademarkName":"香奈儿"}
 
         map.sinkTo(finksink.getDorisSink("dws_trade_sku_order_window"));

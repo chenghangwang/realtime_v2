@@ -72,10 +72,10 @@ public class finksink {
         DorisSink<String> sink = DorisSink.<String>builder()
                 .setDorisReadOptions(DorisReadOptions.builder().build())
                 .setDorisOptions(DorisOptions.builder() // 设置 doris 的连接参数
-                        .setFenodes("cdh03:8110")
+                        .setFenodes("cdh03:8030")
                         .setTableIdentifier(constat.DORIS_DATABASE + "." + tableName)
-                        .setUsername("admin")
-                        .setPassword("admin")
+                        .setUsername("root")
+                        .setPassword("")
                         .build())
                 .setDorisExecutionOptions(DorisExecutionOptions.builder() // 执行参数
                         //.setLabelPrefix("doris-label")  // stream-load 导入的时候的 label 前缀

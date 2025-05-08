@@ -17,10 +17,10 @@ import utils.Sqlutil;
 //已经跑了
     //15号数据和分期
 
-public class DwsTrafficSourceKeywordPageViewWindow extends BasesqlApp
-{
+public class DwsTrafficSourceKeywordPageViewWindow extends BasesqlApp {
     public static void main(String[] args) {
-        new DwsTrafficSourceKeywordPageViewWindow().start(10009,4,"dws_traffic_source_keyword_page_view_window");
+        new DwsTrafficSourceKeywordPageViewWindow()
+                .start(10065,4,"dws_traffic_source_keyword_page_view_window");
     }
     @Override
     public void handle(StreamTableEnvironment tableEnv) {
@@ -35,7 +35,7 @@ public class DwsTrafficSourceKeywordPageViewWindow extends BasesqlApp
         tableEnv.createTemporarySystemFunction("KeywordUDTF", KeywordUDTF.class);
         Table searchTable = tableEnv.sqlQuery("select \n" +
                 "   page['item']  fullword,\n" +
-                "   et\n" +
+                "   et \n" +
                 "from page_log\n" +
                 "where page['last_page_id'] = 'search' " +
                 "and page['item_type'] ='keyword' and page['item'] is not null");
@@ -56,7 +56,7 @@ public class DwsTrafficSourceKeywordPageViewWindow extends BasesqlApp
                 "     keyword,\n" +
                 "     count(*) keyword_count\n" +
                 "  FROM TABLE(\n" +
-                "    TUMBLE(TABLE t0, DESCRIPTOR(et), INTERVAL '1' seconds))\n" +
+                "    TUMBLE(TABLE t0, DESCRIPTOR(et), INTERVAL '3' seconds))\n" +
                 "  GROUP BY window_start,keyword");
 
 //        resTable.execute().print();
@@ -72,8 +72,8 @@ public class DwsTrafficSourceKeywordPageViewWindow extends BasesqlApp
                 " 'connector' = 'doris'," +
                 " 'fenodes' = '" + constat.DORIS_FE_NODES + "'," +
                 "  'table.identifier' = '" + constat.DORIS_DATABASE + ".dws_traffic_source_keyword_page_view_window'," +
-                "  'username' = 'admin'," +
-                "  'password' = 'admin', " +
+                "  'username' = 'root'," +
+                "  'password' = '', " +
                 "  'sink.properties.format' = 'json', " +
                 "  'sink.buffer-count' = '2', " +
                 "  'sink.buffer-size' = '2048'," +
@@ -81,7 +81,6 @@ public class DwsTrafficSourceKeywordPageViewWindow extends BasesqlApp
                 "  'sink.properties.read_json_by_line' = 'true' " +
                 ")");
         resTable.executeInsert("dws_traffic_source_keyword_page_view_window");
-//    resTable.execute().print();
 
     }
 

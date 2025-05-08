@@ -171,7 +171,7 @@ public class dws_user_user_login_window extends BaseApp {
                 return JSON.toJSONString(userLoginBean);
             }
         });
-//        map1.print();
+        map1.print();
 //   2> {"backCt":1,"curDate":"2025-04-16","edt":"2025-04-16 14:00:00","stt":"2025-04-16 11:00:00","uuCt":0}
 //
 //        Caused by: org.apache.doris.flink.exception.DorisRuntimeException: tabel {} stream load error: realtime_v1.dws_user_user_login_window, see more in [DATA_QUALITY_ERROR]too many filtered rows

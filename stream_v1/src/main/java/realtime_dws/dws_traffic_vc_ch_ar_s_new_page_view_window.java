@@ -167,7 +167,7 @@ public class dws_traffic_vc_ch_ar_s_new_page_view_window extends BaseApp {
                 });
 
         map.sinkTo(finksink.getDorisSink("dws_traffic_vc_ch_ar_is_new_page_view_window"));
-//   map.print();
+   map.print();
 
     }
 
