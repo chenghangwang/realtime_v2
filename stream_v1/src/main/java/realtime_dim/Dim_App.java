@@ -63,6 +63,8 @@ public class Dim_App extends BaseApp {
                 }
             }
         });
+
+
 //        json-->> {"op":"c","after":{"birthday":1284,"create_time":1654646400000,"login_name":"63k5cvx","nick_name":"艺欣","name":"邹艺欣","user_level":"1","phone_num":"13512773463","id":42,"email":"63k5cvx@sohu.com"},"source":{"thread":49,"server_id":1,"version":"1.9.7.Final","file":"mysql-bin.000006","connector":"mysql","pos":1572056,"name":"mysql_binlog_source","row":0,"ts_ms":1744418624000,"snapshot":"false","db":"realtime","table":"user_info"},"ts_ms":1744418621273}
 //
 //        kafkaDs.print("json-->");

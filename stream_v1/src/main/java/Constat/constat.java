@@ -16,6 +16,9 @@ public class constat {
 
     public static final int MYSQL_PORT = 3306;
     public static final String MYSQL_USER_NAME = "root";
+
+
+
     public static final String MYSQL_PASSWORD = "root";
     public static final String HBASE_NAMESPACE = "realtime_v1";
 
