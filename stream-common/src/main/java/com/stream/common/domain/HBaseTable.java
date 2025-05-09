@@ -13,6 +13,10 @@ public class HBaseTable implements Serializable {
     private String ethTranNormalByHash;
     private String ethTranInternalByHash;
     private String ethTranNormalByAddress;
+
+
+
+
     private String ethTranInternalByAddress;
 
     public HBaseTable() {

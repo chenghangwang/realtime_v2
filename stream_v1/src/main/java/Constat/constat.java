@@ -13,6 +13,7 @@ public class constat {
     public static final String TOPIC_LOG = "realtime_log_v1";
 
     public static final String MYSQL_HOST = "cdh03";
+
     public static final int MYSQL_PORT = 3306;
     public static final String MYSQL_USER_NAME = "root";
     public static final String MYSQL_PASSWORD = "root";

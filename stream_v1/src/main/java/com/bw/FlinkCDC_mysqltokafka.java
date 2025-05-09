@@ -23,6 +23,8 @@ public class FlinkCDC_mysqltokafka {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
+
+
         Properties properties = new Properties();
         properties.setProperty("decimal.handling.mode","string");
         properties.setProperty("time.precision.mode","connect");
