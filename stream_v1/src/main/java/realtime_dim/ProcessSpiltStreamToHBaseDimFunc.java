@@ -41,6 +41,8 @@ public class ProcessSpiltStreamToHBaseDimFunc extends BroadcastProcessFunction<J
 
 
 
+
+
     @Override
     public void open(Configuration parameters) throws Exception {
         Connection connection = JdbcUtils.getMySQLConnection(

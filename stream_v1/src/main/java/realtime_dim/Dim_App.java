@@ -69,6 +69,8 @@ public class Dim_App extends BaseApp {
 //
 //        kafkaDs.print("json-->");
 
+
+
         //cdc
         MySqlSource<String> getmysqlsource = flinksorceutil.getmysqlsource("realtime", "table_process_dim");
         DataStreamSource<String> mySQL_source = env.fromSource(getmysqlsource, WatermarkStrategy.noWatermarks(), "MySQL Source")
