@@ -46,6 +46,9 @@ public class FlinkCDC_mysqltokafka {
 //        {"before":null,"after":{"id":2944,"order_id":1504,"order_status":"1001","create_time":1744068523000,"operate_time":null},"source":{"version":"1.9.7.Final","connector":"mysql","name":"mysql_binlog_source","ts_ms":1744100949000,"snapshot":"false","db":"realtime","sequence":null,"table":"order_status_log","server_id":1,"gtid":null,"file":"mysql-bin.000001","pos":2446435,"row":0,"thread":177,"query":null},"op":"c","ts_ms":1744100949425,"transaction":null}
         ds.print();
 
+
+
+
         KafkaSink<String> sink = KafkaSink.<String>builder()
                 .setBootstrapServers("cdh01:9092")
                 .setRecordSerializer(KafkaRecordSerializationSchema.builder()

@@ -56,6 +56,7 @@ public class Dim_App extends BaseApp {
                         || "u".equals(type)
                         || "d".equals(type)
                         || "r".equals(type))
+
                         && data != null
                         && data.length() > 2
                 ) {
