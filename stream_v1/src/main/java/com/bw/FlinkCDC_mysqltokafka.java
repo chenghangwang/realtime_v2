@@ -49,6 +49,9 @@ public class FlinkCDC_mysqltokafka {
 
 
 
+
+
+
         KafkaSink<String> sink = KafkaSink.<String>builder()
                 .setBootstrapServers("cdh01:9092")
                 .setRecordSerializer(KafkaRecordSerializationSchema.builder()
