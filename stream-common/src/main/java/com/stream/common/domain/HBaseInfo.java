@@ -21,6 +21,8 @@ public class HBaseInfo implements Serializable {
     private String address;
 
     private String port;
+
+
     private List<HBaseTable> tableList = new ArrayList<>();
 
     @Data

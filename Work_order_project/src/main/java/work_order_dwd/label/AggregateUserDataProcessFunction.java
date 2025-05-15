@@ -35,6 +35,10 @@ public class AggregateUserDataProcessFunction extends KeyedProcessFunction<Strin
                 new ValueStateDescriptor<>("pv-state", Long.class)
         );
 
+
+
+
+
         // 初始化字段集合状态（使用TypeHint保留泛型信息）
         MapStateDescriptor<String, Set<String>> fieldsDescriptor =
                 new MapStateDescriptor<>(
