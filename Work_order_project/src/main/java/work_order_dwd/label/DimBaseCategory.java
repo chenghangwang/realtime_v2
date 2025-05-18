@@ -21,4 +21,8 @@ public class DimBaseCategory implements Serializable {
     private String b1name;
 
 
+
+
+
+
 }
