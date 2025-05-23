@@ -22,6 +22,8 @@ public class HBaseTable implements Serializable {
     public HBaseTable() {
     }
 
+
+
     public HBaseTable(String ethBlock, String ethTranNormalByHash, String ethTranInternalByHash, String ethTranNormalByAddress, String ethTranInternalByAddress) {
         this.ethBlock = ethBlock;
         this.ethTranNormalByHash = ethTranNormalByHash;
